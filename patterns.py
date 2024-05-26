@@ -11,7 +11,16 @@ if figure == 'rectangular triangle':
         print("")
         stars += 1
 elif figure == 'square':
-    pass
+    row_line = int(input())
+    for i in range(row_line):
+        if i == 0 or i == row_line - 1:
+            for l in range(row_line):
+                print('*', end='')
+
+            print('')
+
+        else:
+            print('*' + (row_line - 2) * " " + '*')
 elif figure == 'pyramid':
     pass
 elif figure == 'diamond':
