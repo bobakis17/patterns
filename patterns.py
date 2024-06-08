@@ -22,6 +22,50 @@ elif figure == 'square':
         else:
             print('*' + (row_line - 2) * " " + '*')
 elif figure == 'pyramid':
-    pass
+    rows = int(input())
+    space_counter = (rows - 1) // 2
+
+    for i in range(rows):
+        if i % 2 != 0:
+            continue
+        else:
+            if i != rows - 1:
+                print(space_counter * ' ', end='')
+            for stars in range(i + 1):
+                print('*', end='')
+
+            print('')
+
+            space_counter -= 1
 elif figure == 'diamond':
-    pass
+    rows = int(input())
+    space_counter = (rows - 1) // 2
+
+    for i in range(rows):
+        if i % 2 != 0:
+            continue
+        else:
+            if i != rows - 1:
+                print(space_counter * ' ', end='')
+            for stars in range(i + 1):
+                print('*', end='')
+
+            print('')
+
+            if i == rows - 1:
+                continue
+
+            space_counter -= 1
+
+    for index in range(rows - 2, -1, -1):
+        if index % 2 != 0:
+            continue
+        else:
+            space_counter += 1
+
+            print(space_counter * ' ', end='')
+
+            for stars in range(index + 1):
+                print('*', end='')
+
+            print('')
